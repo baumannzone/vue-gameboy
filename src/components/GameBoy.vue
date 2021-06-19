@@ -3,6 +3,25 @@
     <div class="bg">
       <div class="box box-0"></div>
       <div class="box box-1">
+        <div class="dots">
+          <div class="dot"></div>
+        </div>
+        <div class="squares">
+          <div class="square"></div>
+        </div>
+        <div class="pipe"></div>
+        <div class="bricks">
+          <div class="brick"></div>
+          <div class="brick"></div>
+          <div class="brick"></div>
+          <div class="brick"></div>
+          <div class="brick"></div>
+          <div class="brick"></div>
+          <div class="brick"></div>
+          <div class="brick"></div>
+          <div class="brick"></div>
+          <div class="brick"></div>
+        </div>
         <div class="cross-button" />
         <div class="a-b-buttons" />
         <div class="start-select-buttons" />
@@ -22,6 +41,8 @@ export default {
 <style scoped lang="stylus">
 black-color = #413557
 pink-color = #f96489
+purple-color = #b5a2e1
+green-color = #79f1bb
 
 .game-boy
   display flex
@@ -47,11 +68,66 @@ pink-color = #f96489
     left 40px
     background black-color
 
+  .pipe
+    position absolute
+    width 50px
+    height 70px
+    border 15px solid black-color
+    top 120px
+    right 50px
+    background: green-color
+
+    &:before
+      content ''
+      position absolute
+      width 80px
+      height 20px
+      border 15px solid black-color
+      background: green-color
+      border-radius 8px
+      top -50px
+      left -30px
+
+  .dots
+    position absolute
+    .dot
+      position relative
+      width 13px
+      height 13px
+      background-color transparent
+      border-radius 50%
+      box-shadow 20px 120px black-color,
+        50px 170px black-color,
+        100px 175px purple-color,
+        140px 145px black-color,
+        300px 105px purple-color
+
+  .bricks
+    position absolute
+    display flex
+    width 160%
+    height 45px
+    top 50%
+    left 50%
+    padding 12px
+    border-radius 5px
+    transform translate(-50%, -50%)
+    background-color black-color
+    .brick
+      width 45px
+      height 45px
+      margin-right 12px
+      background-color pink-color
+
+      &:last-child
+        margin-right 0
+
+
   .cross-button
     position absolute
     width 30px
     height 90px
-    bottom 100px
+    bottom 80px
     left 45px
     background-color: black-color
     border-radius 8px
@@ -70,7 +146,7 @@ pink-color = #f96489
     position absolute
     width 125px
     height 45px
-    bottom 120px
+    bottom 100px
     right 30px
     transform rotate(-25deg)
     transform-origin left center
