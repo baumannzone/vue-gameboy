@@ -51,7 +51,6 @@ green-color = #79f1bb
   background: #f4f4f4
 
 .bg
-  position relative // esto
   display flex
   justify-content center
 
@@ -64,12 +63,10 @@ green-color = #79f1bb
   background white
 
   &.box-0
-    position absolute
     left 40px
     background black-color
 
   .pipe
-    position absolute
     width 50px
     height 70px
     border 15px solid black-color
@@ -77,16 +74,6 @@ green-color = #79f1bb
     right 50px
     background: green-color
 
-    &:before
-      content ''
-      position absolute
-      width 80px
-      height 20px
-      border 15px solid black-color
-      background: green-color
-      border-radius 8px
-      top -50px
-      left -30px
 
   .dots
     position absolute
@@ -96,11 +83,6 @@ green-color = #79f1bb
       height 13px
       background-color transparent
       border-radius 50%
-      box-shadow 20px 120px black-color,
-        50px 170px black-color,
-        100px 175px purple-color,
-        140px 145px black-color,
-        300px 105px purple-color
 
   .bricks
     position absolute
@@ -151,16 +133,6 @@ green-color = #79f1bb
     transform rotate(-25deg)
     transform-origin left center
 
-    &::before
-      content ''
-      position absolute
-      width 45px
-      height 45px
-      left 0
-      background pink-color
-      border-radius 50%
-      box-shadow 75px 0 0 0 pink-color
-
   .start-select-buttons
     position absolute
     width 35px
@@ -170,7 +142,6 @@ green-color = #79f1bb
     transform translate(-170%)
     border-radius 12px
     background-color: black-color
-    box-shadow 70px 0 black-color
 
   .speakers
     position absolute
@@ -178,13 +149,7 @@ green-color = #79f1bb
     height 10px
     right 75px
     bottom 40px
-    transform rotate(-45deg)
     transform-origin left top
     border-radius 50%
     background-color black-color
-    box-shadow 18px 0 black-color,
-      36px 0 black-color,
-      0 18px black-color,
-      18px 18px black-color,
-      36px 18px black-color
 </style>
